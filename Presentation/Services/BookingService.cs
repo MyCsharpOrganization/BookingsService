@@ -44,7 +44,6 @@ public class BookingService(IBookingRepository bookingRepository) : IBookingServ
 
         if (!result.Success)
         {
-            // Du kommer nu få felet direkt i Swagger istället för ett generiskt "Service returned false"
             throw new Exception($"Booking failed: {result.Error}");
         }
 

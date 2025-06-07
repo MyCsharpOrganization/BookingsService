@@ -52,7 +52,6 @@ public class BookingRepository(DataContext context) : BaseRepository<BookingEnti
     {
         try
         {
-            // Detta är viktigt för att markera alla objekt som nya (om du skapar hela trädet från grunden)
             _context.Entry(entity).State = EntityState.Added;
             _context.Entry(entity.BookingOwner).State = EntityState.Added;
             _context.Entry(entity.BookingOwner.Address).State = EntityState.Added;
